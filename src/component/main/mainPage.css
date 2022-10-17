@@ -20,7 +20,7 @@
     border-radius: 30px;
     width: 50%;
     padding: 10px;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
 }
 
 
@@ -63,4 +63,17 @@ h1 {
         grid-area: visitors;
         grid-auto-flow: row;
     }
+
+    .slider {
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        grid-area: slider;
+        border: 2px solid white;
+        border-radius: 30px;
+        width: 80%;
+        height: 60%;
+        padding: 10px;
+    }
+
 }

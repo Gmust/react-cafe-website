@@ -66,34 +66,4 @@
     }
 
 
-
-  /*  .burger-menu {
-        cursor: pointer;
-        height: 8px;
-        width: 50px;
-        background-color: #0e9d0e;
-        border-radius: 5px;
-        transition: all, .5s ease-in-out;
-    }
-
-    .burger-menu::before, .burger-menu::after {
-        content: '';
-        position: absolute;
-        height: 8px;
-        width: 50px;
-        background-color: #0e9d0e;
-        border-radius: 5px;
-        transition: all, .5s ease-in-out;
-    }
-
-    .burger-menu::before{
-        transform: translateY(-16px);
-    }
-
-    .burger-menu::after{
-        transform: translateY(16px);
-    }*/
-
-
-
 }

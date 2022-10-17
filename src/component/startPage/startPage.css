@@ -10,6 +10,7 @@
     align-items: center;
     justify-content: center;
     transition: 0.5s;
+    flex-wrap: wrap;
 }
 
 .main-part {
@@ -51,4 +52,25 @@
 }
 .additional-part div{
     padding: 30px;
+}
+
+@media screen and (max-width: 780px) {
+    .start-wrapper{
+        background-color: black;
+        background-image: none;
+    }
+
+    .main-part{
+        margin-left: 36%;
+    }
+}
+@media screen and (max-width: 380px) {
+    .start-wrapper{
+        background-color: black;
+        background-image: none;
+    }
+
+    .main-part{
+        margin-left: 70%;
+    }
 }

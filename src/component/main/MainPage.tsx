@@ -3,7 +3,7 @@ import './mainPage.css';
 import Slider from "./slider/Slider";
 import {motion} from "framer-motion";
 import {Preloader} from "../../assets/preloader/Preloader";
-import {useLoadDishes} from "../../hooks/loadDishes";
+import {useLoadDishes} from "../../hooks/react";
 import VisitorsList from "./visitors/VisitorsList";
 
 const MainPage = () => {

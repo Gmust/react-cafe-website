@@ -3,7 +3,7 @@ import './filterBtn.css'
 import {motion} from "framer-motion";
 import {setSelectedType} from "../../../../store/dishesSlice";
 import {useAppDispatch, useAppSelector} from "../../../../hooks/redux";
-import {useLoadDishes} from "../../../../hooks/loadDishes";
+import {useLoadDishes} from "../../../../hooks/react";
 
 type TFilterProps = {
     id: number,

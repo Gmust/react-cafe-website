@@ -2,7 +2,7 @@ import React from 'react';
 import {Route, Routes, useLocation} from "react-router-dom";
 import {routes} from "../Routes";
 import {AnimatePresence} from "framer-motion";
-import {useLoadDishes} from "../hooks/loadDishes";
+import {useLoadDishes} from "../hooks/react";
 
 
 const Router = () => {
