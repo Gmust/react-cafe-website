@@ -1,0 +1,54 @@
+.start-wrapper {
+    background-image: url("/src/assets/img/wallpaperflare.com_wallpaper.png");
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.main-part {
+    color: white;
+    font-size: 45px;
+    text-align: center;
+    font-family: var(--corbelL)
+}
+
+.main-part p {
+    margin-top: 15px;
+}
+
+.main-part b {
+    font-weight: 800;
+}
+
+.start-wrapper button {
+    background-color: forestgreen;
+    border: none;
+    border-radius: 15px;
+    font-size: 35px;
+    font-family: "Corbel Light", ui-serif;
+    margin-top: 20px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.additional-part {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    font-size: 12px;
+    font-family: "Corbel Light", ui-serif;
+    color: gainsboro;
+    opacity: 0.9;
+    justify-content: space-between;
+}
+.additional-part div{
+    padding: 30px;
+}

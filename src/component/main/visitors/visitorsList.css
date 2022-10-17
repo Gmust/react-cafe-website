@@ -1,0 +1,6 @@
+.visitors-wrapper {
+    display: flex;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}

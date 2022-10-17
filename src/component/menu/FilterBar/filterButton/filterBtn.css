@@ -1,0 +1,25 @@
+.type-button-style{
+    margin: 8px;
+    border: none;
+    padding: 15px;
+    border-radius: 18px;
+    background-color: green;
+    color:white;
+    font-family: var(--corbelL);
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.selected-type-button-style {
+    margin: 0px 20px;
+    border: 1px solid white;
+    padding: 15px;
+    border-radius: 18px;
+    background-color: crimson;
+    color:white;
+    font-family: var(--corbelL);
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}

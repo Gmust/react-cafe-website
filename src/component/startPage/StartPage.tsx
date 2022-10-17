@@ -1,0 +1,60 @@
+import React from 'react';
+import './startPage.css'
+import {BsFillGeoAltFill,BsTelephone,BsClock} from "react-icons/bs";
+import {useNavigate} from "react-router-dom";
+import {useAppDispatch} from "../../hooks/redux";
+import {setIsMain} from "../../store/viewSlice";
+import { motion } from "framer-motion"
+
+
+const StartPage = () => {
+
+    const navigate = useNavigate();
+    const dispatch = useAppDispatch();
+
+    const handleExploreBtn =()=>{
+        navigate('/main');
+        dispatch(setIsMain(true));
+    }
+
+    return (
+        <div className='start-wrapper' >
+            <motion.div   initial={{ x: "100%" }}
+                          animate={{ x: "calc(15vw - 50%)" }}
+                             className='main-part'>
+                <div>
+                    <p>Your <b>FAVORITE FOOD</b></p>
+                    <p>Always <b>TASTY AND FRESH</b></p>
+                </div>
+
+                <div  >
+                    <motion.button onClick={handleExploreBtn}
+                        whileHover={{scale:1.1}} transition={{delay:0.05}} whileTap={{scale:0.9}}>
+                        Explore the range</motion.button>
+                </div>
+
+                <div className='additional-part'>
+                    <div>
+                        <BsClock/>
+                        <p>Working hours: </p>
+                        <p> 9:00 to 19:00  </p>
+                    </div>
+
+                    <div>
+                        <BsFillGeoAltFill cursor='pointer'/>
+                        <p>Street 1</p>
+                        <p style={{cursor:'pointer'}}>Find us here</p>
+                    </div>
+
+                    <div>
+                        <BsTelephone/>
+                        <p>505-500-505</p>
+                        <p>Call online</p>
+                    </div>
+                </div>
+            </motion.div>
+        </div>
+    );
+};
+
+export default StartPage;

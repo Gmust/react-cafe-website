@@ -1,0 +1,66 @@
+.main-page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+    grid-template-rows: 0.125fr 200px 200px 200px 1fr;
+    grid-template-areas:
+        ". text text text ."
+        ". slider slider slider ."
+        ". slider slider slider ."
+        ". slider slider slider ."
+        ". visitors visitors visitors .";
+    justify-items: center;
+}
+
+.slider {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-area: slider;
+    border: 2px solid white;
+    border-radius: 30px;
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 80px;
+}
+
+
+h1 {
+    margin-top: 20px;
+    grid-area: text;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: var(--corbelL);
+    text-align: center;
+}
+
+.visitors {
+    font-size: 40px;
+    grid-area: visitors;
+    grid-auto-flow: row;
+}
+
+.visitors h2 {
+    text-align: center;
+}
+
+
+@media all and (max-width: 665px) {
+    .main-page-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+        grid-template-rows: 0.09fr 200px 200px 200px 1fr;
+        grid-template-areas:
+        ". text text text ."
+        ". slider slider slider ."
+        ". slider slider slider ."
+        ". slider slider slider ."
+        ". visitors visitors visitors .";
+        justify-items: center;
+    }
+
+    .visitors {
+        font-size: 40px;
+        grid-area: visitors;
+        grid-auto-flow: row;
+    }
+}
