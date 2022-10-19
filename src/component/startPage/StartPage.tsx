@@ -1,10 +1,11 @@
 import React from 'react';
 import './startPage.css'
 import {BsFillGeoAltFill,BsTelephone,BsClock} from "react-icons/bs";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {useAppDispatch} from "../../hooks/redux";
 import {setIsMain} from "../../store/viewSlice";
 import { motion } from "framer-motion"
+import {MAP_LINK} from "../../utils/consts";
 
 
 const StartPage = () => {
@@ -15,6 +16,10 @@ const StartPage = () => {
     const handleExploreBtn =()=>{
         navigate('/main');
         dispatch(setIsMain(true));
+    }
+
+    const handleFindButton =()=>{
+
     }
 
     return (
@@ -42,9 +47,10 @@ const StartPage = () => {
 
                     <div>
                         <BsFillGeoAltFill cursor='pointer'/>
-                        <p>Street 1</p>
-                        <p style={{cursor:'pointer'}}>Find us here</p>
-                    </div>
+                        <p>Kościelna 17, Poznań</p>
+                        <a href={MAP_LINK} style={{cursor:'pointer'}} rel="noreferrer noopener" target="_blank">
+                            <p>Find us here</p></a>
+                    </div>v
 
                     <div>
                         <BsTelephone/>

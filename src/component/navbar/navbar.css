@@ -52,7 +52,7 @@
 @media screen and (max-width: 665px) {
     .navbar-wrapper {
         display: flex;
-        flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
         margin-top: 20px;
@@ -64,6 +64,10 @@
         color: white;
         text-decoration: green;
     }
+
+
+
+
 
 
 }

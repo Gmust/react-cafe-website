@@ -17,7 +17,10 @@
     "eslint": "8.22.0",
     "firebase": "^9.9.4",
     "framer-motion": "^7.3.2",
+    "i": "^0.3.7",
+    "npm": "^8.19.2",
     "react": "^18.2.0",
+    "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
     "react-redux": "^8.0.2",
@@ -50,5 +53,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-copy-to-clipboard": "^5.0.4"
   }
 }

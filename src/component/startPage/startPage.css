@@ -11,17 +11,18 @@
     justify-content: center;
     transition: 0.5s;
     flex-wrap: wrap;
+    font-family: var(--corbelL)
 }
 
 .main-part {
     color: white;
     font-size: 45px;
     text-align: center;
-    font-family: var(--corbelL)
 }
 
 .main-part p {
     margin-top: 15px;
+    text-decoration: none;
 }
 
 .main-part b {
@@ -33,7 +34,6 @@
     border: none;
     border-radius: 15px;
     font-size: 35px;
-    font-family: "Corbel Light", ui-serif;
     margin-top: 20px;
     padding: 10px;
     cursor: pointer;
@@ -53,6 +53,11 @@
 .additional-part div{
     padding: 30px;
 }
+
+.additional-part a{
+    color: gainsboro;
+}
+
 
 @media screen and (max-width: 780px) {
     .start-wrapper{

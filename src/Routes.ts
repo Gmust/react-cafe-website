@@ -1,9 +1,10 @@
-import {START_PAGE, BASKET_PAGE, MAIN_PAGE, ABOUT_PAGE, MENU_PAGE} from "./utils/consts";
+import {START_PAGE, BASKET_PAGE, MAIN_PAGE, ABOUT_PAGE, MENU_PAGE, CONTACTS_PAGE} from "./utils/consts";
 import StartPage from "./component/startPage/StartPage";
 import Basket from "./component/basket/Basket";
 import MainPage from "./component/main/MainPage";
 import About from "./component/about/About";
 import Menu from "./component/menu/Menu";
+import Contacts from "./component/contacts/Contacts";
 
 
 export const routes = [
@@ -26,5 +27,9 @@ export const routes = [
     {
         path: MENU_PAGE,
         Component: Menu
+    },
+    {
+        path: CONTACTS_PAGE,
+        Component: Contacts
     }
 ]
