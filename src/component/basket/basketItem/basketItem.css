@@ -1,0 +1,37 @@
+.basketItem-wrapper {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    margin-left: 16px;
+    padding: 5px;
+    margin-bottom: 30px;
+}
+
+.basketItem-wrapper img {
+    border: 2px solid black;
+    padding: 5px;
+    margin: 5px;
+    height: 100px;
+    width: 100px;
+}
+
+.basketItem-wrapper button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.basketItem-wrapper span{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.amountChange-style{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

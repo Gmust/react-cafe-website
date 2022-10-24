@@ -27,6 +27,7 @@
     padding: 0;
 }
 
+
 .navbar-link {
     display: inline-block;
     text-decoration: none;
@@ -46,8 +47,21 @@
     display: flex;
     justify-content: flex-end;
     margin-right: 20px;
+    cursor: pointer;
 }
 
+.basket span {
+    background-color: white;
+    margin-left: 1px;
+    color: black;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    padding: 4px;
+}
+
+.totalCount-style {
+    margin-top: 10px;
+}
 
 @media screen and (max-width: 665px) {
     .navbar-wrapper {
@@ -58,16 +72,12 @@
         margin-top: 20px;
     }
 
-    .navbar-link{
+    .navbar-link {
         font-size: 10px;
         padding: 2px;
         color: white;
         text-decoration: green;
     }
-
-
-
-
 
 
 }

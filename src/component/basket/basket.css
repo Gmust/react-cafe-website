@@ -1,0 +1,81 @@
+
+.basket-wrapper {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    z-index: 99;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.basket-wrapper-content {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 20px;
+    max-height: 600px;
+    width: 800px;
+    transform: scale(0.5);
+    transition: 0.4s all;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.basket-wrapper-content.active {
+    transform: scale(1);
+}
+
+
+.basket-wrapper.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.items {
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.order-btns {
+    bottom: 0;
+    margin-bottom: 10px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-self: stretch;
+}
+
+
+.totalPrice {
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1px;
+}
+
+.closeBtn {
+    display: flex;
+    margin-left: 95%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: red;
+}
+
+.closeBtn:hover{
+    transform: scale(1.1);
+    transition: 100ms;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import './startPage.css'
 import {BsFillGeoAltFill,BsTelephone,BsClock} from "react-icons/bs";
-import {Link, useNavigate} from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import {useAppDispatch} from "../../hooks/redux";
 import {setIsMain} from "../../store/viewSlice";
 import { motion } from "framer-motion"
@@ -16,10 +16,6 @@ const StartPage = () => {
     const handleExploreBtn =()=>{
         navigate('/main');
         dispatch(setIsMain(true));
-    }
-
-    const handleFindButton =()=>{
-
     }
 
     return (
@@ -50,7 +46,7 @@ const StartPage = () => {
                         <p>Kościelna 17, Poznań</p>
                         <a href={MAP_LINK} style={{cursor:'pointer'}} rel="noreferrer noopener" target="_blank">
                             <p>Find us here</p></a>
-                    </div>v
+                    </div>
 
                     <div>
                         <BsTelephone/>

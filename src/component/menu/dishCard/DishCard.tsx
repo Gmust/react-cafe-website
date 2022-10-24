@@ -5,6 +5,7 @@ import {setSelectedDish} from "../../../store/dishesSlice";
 import {useAppDispatch, useAppSelector} from "../../../hooks/redux";
 import {IDishes} from "../../../models/dishes.models";
 import {setIsCardSelected} from "../../../store/viewSlice";
+import {setItemInBasket} from "../../../store/basketSlice";
 
 
 const DishCard = ({...item}: IDishes) => {
@@ -25,6 +26,9 @@ const DishCard = ({...item}: IDishes) => {
         dispatch(setIsCardSelected(!isCardSelected))
     }
 
+    const handleAddToBasket = (item:IDishes) => {
+        dispatch(setItemInBasket(item))
+    }
 
     return (
         <motion.div key={item.id}
@@ -43,7 +47,7 @@ const DishCard = ({...item}: IDishes) => {
                         myStyle[`${item.id}`] ? 'dishes-wrapper-opened-style' : 'dishes-wrapper'}
         >
             <h2>{item.dish.name}</h2>
-            <img src={item.dish.img}/>
+            <img src={item.dish.img} alt=''/>
             {// @ts-ignore
                 myStyle[`${item.id}`]
                     ?
@@ -53,9 +57,12 @@ const DishCard = ({...item}: IDishes) => {
                         <br/>
                         <span className='card-footer-style'>
                              <h3> Price: {item.dish.price} $ <motion.button
-                             onClick={(e)=> e.stopPropagation()}
-                             whileHover={{ scale: 1.1 }}
-                             whileTap={{ scale: 0.9 }}
+                                 onClick={(e) => {
+                                     handleAddToBasket(item);
+                                     e.stopPropagation();
+                                 }}
+                                 whileHover={{scale: 1.1}}
+                                 whileTap={{scale: 0.9}}
                              >Buy</motion.button>   </h3>
                         </span>
                     </div>

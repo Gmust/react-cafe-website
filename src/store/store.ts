@@ -1,13 +1,19 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
 import viewSlice from "./viewSlice";
 import dishesSlice from "./dishesSlice";
+import contactsSlice from "./contactsSlice";
 import {dishesApi} from "../services/dishesApi";
+import {contactsApi} from "../services/contactsApi";
+import basketSlice from "./basketSlice";
 
 
 const rootReducer = combineReducers({
     view: viewSlice,
     dishes: dishesSlice,
-    [dishesApi.reducerPath]: dishesApi.reducer
+    contacts: contactsSlice,
+    basket: basketSlice,
+    [dishesApi.reducerPath]: dishesApi.reducer,
+    [contactsApi.reducerPath]: contactsApi.reducer,
 });
 
 

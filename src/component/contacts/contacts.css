@@ -1,8 +1,8 @@
 .contacts-wrapper {
     margin-top: 50px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 0.5fr;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 1fr 1fr;
+    grid-template-rows: 0.7fr 1fr 1fr 0.5fr;
     grid-template-areas:
         "map map map contacts contacts "
         "map map map form form "
@@ -39,7 +39,7 @@
     grid-area: form;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 980px) {
     .contacts-wrapper {
         display: flex;
         flex-wrap: wrap;

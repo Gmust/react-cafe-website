@@ -1,0 +1,8 @@
+.amountChange-wrapper{
+    display: flex;
+    width: 40px;
+}
+
+.amountChange-wrapper div{
+    cursor: pointer;
+}

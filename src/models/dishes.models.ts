@@ -1,6 +1,7 @@
 export interface IDishes {
     id: number,
     type: string,
+    dishesAmount: number
     dish: TDishes
 }
 
