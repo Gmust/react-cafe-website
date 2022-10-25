@@ -1,11 +1,12 @@
 import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/dist/query/react";
 import {IDishes} from "../models/dishes.models";
+import {BASE_API_URL} from "../utils/consts";
 
 
 export const dishesApi = createApi({
     reducerPath: 'dishesApi',
     baseQuery: fetchBaseQuery({
-        baseUrl: 'https://6329c4704c626ff832c9cac9.mockapi.io/api',
+        baseUrl: BASE_API_URL,
     }),
     tagTypes: ['Dishes'],
     endpoints: (builder) => ({

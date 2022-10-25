@@ -1,4 +1,4 @@
-export interface IDishes {
+export interface IDishes  {
     id: number,
     type: string,
     dishesAmount: number

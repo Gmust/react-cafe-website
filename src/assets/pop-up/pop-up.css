@@ -1,0 +1,37 @@
+.popUp-wrapper {
+    position: fixed;
+    margin-top: -30px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    opacity: 0;
+    z-index: 99;
+    transition: 0.5s;
+}
+
+.popUp-wrapper-content {
+    background-color: green;
+    color: white;
+    font-size: 30px;
+    border-radius: 20px;
+    max-height: 100px;
+    max-width: 1000px;
+    transform: scale(0.5);
+    transition: 0.4s all;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.popUp-wrapper.active {
+    opacity: 1;
+}
+
+.popUp-wrapper-content.active {
+    transform: scale(1);
+}

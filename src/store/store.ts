@@ -5,6 +5,7 @@ import contactsSlice from "./contactsSlice";
 import {dishesApi} from "../services/dishesApi";
 import {contactsApi} from "../services/contactsApi";
 import basketSlice from "./basketSlice";
+import {basketApi} from "../services/basketApi";
 
 
 const rootReducer = combineReducers({
@@ -14,12 +15,13 @@ const rootReducer = combineReducers({
     basket: basketSlice,
     [dishesApi.reducerPath]: dishesApi.reducer,
     [contactsApi.reducerPath]: contactsApi.reducer,
+    [basketApi.reducerPath]: basketApi.reducer
 });
 
 
 export const setupStore = () => configureStore({
     reducer: rootReducer,
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(dishesApi.middleware)
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(dishesApi.middleware, contactsApi.middleware, basketApi.middleware)
 })
 
 

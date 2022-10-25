@@ -1,11 +1,13 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {IDishes} from "../models/dishes.models";
+import {IOrders} from "../models/orders.models";
 
 
 const initialState = {
     basketItems: [] as any,
     amount: 0,
-    totalPrice: 0
+    totalPrice: 0,
+    order: {} as IOrders
 }
 
 const basketSlice = createSlice({
@@ -45,6 +47,9 @@ const basketSlice = createSlice({
         },
         clearBasket(state) {
             state.basketItems = [];
+        },
+        setOrder(state, action){
+              state.order = action.payload
         }
     }
 })
@@ -55,6 +60,7 @@ export const {
     calculateTotalPrice,
     clearBasket,
     increase,
-    decrease
+    decrease,
+    setOrder
 } = basketSlice.actions;
 export default basketSlice.reducer;

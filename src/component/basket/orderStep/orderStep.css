@@ -1,0 +1,60 @@
+form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.telephoneInput-style{
+    margin-bottom: 10px;
+}
+
+.sendOrder-btn{
+
+}
+
+
+.confirmOrder input{
+        border-radius: 14px;
+        text-align: center;
+}
+
+.confirmOrder label{
+    margin-right: 10px;
+
+}
+
+.order-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.order-btn input{
+    margin: 10px;
+    height: 40px;
+    cursor: pointer;
+    background-color: chartreuse;
+    border: 1px solid black;
+    border-radius: 16px;
+    color:black;
+}
+
+.order-btn button{
+    margin: 10px;
+    cursor: pointer;
+    background-color: red;
+    border: 1px solid black;
+    border-radius: 16px;
+    color:white;
+}
+
+.order-btn button:hover{
+    transform: scale(1.1);
+    transition: 300ms;
+}
+
+.order-btn input:hover{
+    transform: scale(1.1);
+    transition: 300ms;
+}
+
