@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import './contactForm.css';
 import {useAppDispatch, useAppSelector} from "../../../hooks/redux";
 import {setIsSent} from "../../../store/contactsSlice";
@@ -78,7 +78,7 @@ const ContactForm = () => {
     const {reset, register, handleSubmit, formState: {errors, isValid}} = useForm<TContactInputs>({mode: 'onBlur'})
 
 
-    const onContactSubmit = async (data: any) => {
+    const onContactSubmit = async (data:any) => {
         if (isSentError) {
             alert('Some error occurred!')
         }

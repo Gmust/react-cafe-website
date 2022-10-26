@@ -1,14 +1,8 @@
-import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/dist/query/react";
 import {IDishes} from "../models/dishes.models";
-import {BASE_API_URL} from "../utils/consts";
+import {mainApi} from "./mainApi";
 
 
-export const dishesApi = createApi({
-    reducerPath: 'dishesApi',
-    baseQuery: fetchBaseQuery({
-        baseUrl: BASE_API_URL,
-    }),
-    tagTypes: ['Dishes'],
+export const dishesApi = mainApi.injectEndpoints({
     endpoints: (builder) => ({
         dishes: builder.query<IDishes[], string>({
             query: (type) => '/dishes?type=' + type,
@@ -17,8 +11,8 @@ export const dishesApi = createApi({
         types: builder.query<[], void>({
             query: () => '/types',
         }),
-
-    })
+    }),
+    overrideExisting: false,
 })
 
 export const {useDishesQuery, useTypesQuery} = dishesApi

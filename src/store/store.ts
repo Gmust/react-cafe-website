@@ -2,10 +2,8 @@ import {combineReducers, configureStore} from "@reduxjs/toolkit";
 import viewSlice from "./viewSlice";
 import dishesSlice from "./dishesSlice";
 import contactsSlice from "./contactsSlice";
-import {dishesApi} from "../services/dishesApi";
-import {contactsApi} from "../services/contactsApi";
 import basketSlice from "./basketSlice";
-import {basketApi} from "../services/basketApi";
+import {mainApi} from "../services/mainApi";
 
 
 const rootReducer = combineReducers({
@@ -13,15 +11,14 @@ const rootReducer = combineReducers({
     dishes: dishesSlice,
     contacts: contactsSlice,
     basket: basketSlice,
-    [dishesApi.reducerPath]: dishesApi.reducer,
-    [contactsApi.reducerPath]: contactsApi.reducer,
-    [basketApi.reducerPath]: basketApi.reducer
+    [mainApi.reducerPath]: mainApi.reducer,
+
 });
 
 
 export const setupStore = () => configureStore({
     reducer: rootReducer,
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(dishesApi.middleware, contactsApi.middleware, basketApi.middleware)
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(mainApi.middleware)
 })
 
 

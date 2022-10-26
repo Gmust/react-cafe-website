@@ -1,21 +1,17 @@
-import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/dist/query/react";
-import {BASE_API_URL} from "../utils/consts";
 import {IOrders} from "../models/orders.models";
+import {mainApi} from "./mainApi";
 
-export const basketApi = createApi({
-    reducerPath: 'basketApi',
-    baseQuery: fetchBaseQuery({
-        baseUrl: BASE_API_URL
-    }),
+export const basketApi = mainApi.injectEndpoints({
     endpoints: (builder) => ({
-            sendOrder: builder.mutation<void, IOrders>({
-                query:(params)=>({
-                    url: '/orders',
-                    method: 'POST',
-                    body: params
-                })
+        sendOrder: builder.mutation<void, IOrders>({
+            query: (params) => ({
+                url: '/orders',
+                method: 'POST',
+                body: params
             })
-        })
+        }),
+    }),
+    overrideExisting: false
 })
 
 export const {useSendOrderMutation} = basketApi

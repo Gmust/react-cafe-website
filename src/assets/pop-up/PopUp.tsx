@@ -7,7 +7,7 @@ const PopUp = ({children}: any) => {
     const {showSuccessOrderPopUp} = useAppSelector(state => state.view)
 
     return (
-        <div className={showSuccessOrderPopUp ? 'popUp-wrapper active' : 'popUp-wrapper'}>
+        <div className={showSuccessOrderPopUp ? 'popUp-wrapper active popUp-slideDown' : 'popUp-wrapper'}>
             <div className={showSuccessOrderPopUp ? 'popUp-wrapper-content active' : 'popUp-wrapper-content'}>
                 {children}
             </div>

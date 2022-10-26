@@ -8,6 +8,7 @@ import Basket from "./component/basket/Basket";
 import {useAppDispatch, useAppSelector} from "./hooks/redux";
 import {calculateTotalPrice} from "./store/basketSlice";
 import PopUp from "./assets/pop-up/PopUp";
+import {setShowSuccessOrderPopUp} from "./store/viewSlice";
 
 const App = () => {
     const {isLoading} = useLoadDishes('')

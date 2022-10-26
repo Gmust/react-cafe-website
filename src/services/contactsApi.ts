@@ -1,13 +1,9 @@
 import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/dist/query/react";
 import {IContacts} from "../models/contacts.models";
-import {BASE_API_URL} from "../utils/consts";
+import {mainApi} from "./mainApi";
 
 
-export const contactsApi = createApi({
-        reducerPath: 'contactsApi',
-        baseQuery: fetchBaseQuery({
-            baseUrl: BASE_API_URL,
-        }),
+export const contactsApi = mainApi.injectEndpoints({
         endpoints: (builder) => ({
                 sendQuestion: builder.mutation< void ,IContacts[]>({
                     //@ts-ignore
@@ -17,8 +13,8 @@ export const contactsApi = createApi({
                         body: params,
                     }),
                 })
-            }
-        )
+            }),
+        overrideExisting: false,
     }
 );
 
