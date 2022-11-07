@@ -1,6 +1,6 @@
 import React from 'react';
 import './Menu.css'
-import {IDishes, ITypes} from "../../models/dishes.models";
+import {IDishes} from "../../models/dishes.models";
 import {useLoadDishes} from "../../hooks/react";
 import {Preloader} from "../../assets/preloader/Preloader";
 import {useAppSelector} from "../../hooks/redux";

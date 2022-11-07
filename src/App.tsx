@@ -8,20 +8,21 @@ import Basket from "./component/basket/Basket";
 import {useAppDispatch, useAppSelector} from "./hooks/redux";
 import {calculateTotalPrice} from "./store/basketSlice";
 import PopUp from "./assets/pop-up/PopUp";
-import {setShowSuccessOrderPopUp} from "./store/viewSlice";
+import BookingConfirm from "./component/booking/bookingConfirm/BookingConfirm";
 
 const App = () => {
     const {isLoading} = useLoadDishes('')
     const {basketItems} = useAppSelector(state => state.basket)
-    const {showSuccessOrderPopUp} = useAppSelector(state => state.view)
+    const {showSuccessOrderPopUp, showSuccessBookingPopUp} = useAppSelector(state => state.view)
     const dispatch = useAppDispatch();
     useEffect(() => {
         dispatch(calculateTotalPrice())
-    }, [basketItems])
+    }, [basketItems, showSuccessOrderPopUp, showSuccessBookingPopUp])
 
     return (
         <div className='wrapper'>
-            {showSuccessOrderPopUp ? <PopUp>Order successfully sent! We will call you soon!</PopUp> : ''}
+            {showSuccessOrderPopUp ? <PopUp>Order successfully sent! We will call you soon!</PopUp> : null}
+            {showSuccessBookingPopUp ? <PopUp>Booking order successfully sent! We will call you soon!</PopUp> : null}
             {isLoading ?
                 <Preloader/>
                 :
@@ -29,6 +30,7 @@ const App = () => {
                     <Navbar/>
                     <Router/>
                     <Basket/>
+                    <BookingConfirm/>
                 </>
             }
         </div>

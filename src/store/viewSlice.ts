@@ -7,7 +7,11 @@ const initialState = {
     isBasketOpen: false,
     orderStep: false,
     bookingStep: 1,
-    showSuccessOrderPopUp: false
+    showSuccessOrderPopUp: false,
+    showSuccessBookingPopUp: false,
+    emailOrTel: 'tel',
+    showBookingConfirm: false,
+    isDateEmpty: false
 }
 
 const viewSlice = createSlice({
@@ -28,6 +32,18 @@ const viewSlice = createSlice({
         },
         setShowSuccessOrderPopUp(state, action: PayloadAction<boolean>) {
             state.showSuccessOrderPopUp = action.payload;
+        },
+        setShowSuccessBookingPopUp(state, action: PayloadAction<boolean>) {
+            state.showSuccessBookingPopUp = action.payload;
+        },
+        setContactWay(state, action: PayloadAction<string>){
+            state.emailOrTel = action.payload
+        },
+        setShowBookingConfirm(state,action:PayloadAction<boolean>){
+            state.showBookingConfirm = action.payload
+        },
+        setDateIsEmpty(state,action:PayloadAction<boolean>){
+            state.isDateEmpty = action.payload
         }
     }
 });
@@ -38,6 +54,10 @@ export const {
     setIsCardSelected,
     setIsBasketOpen,
     setOrderStep,
-    setShowSuccessOrderPopUp
+    setShowSuccessOrderPopUp,
+    setContactWay,
+    setShowBookingConfirm,
+    setDateIsEmpty,
+    setShowSuccessBookingPopUp
 } = viewSlice.actions;
 export default viewSlice.reducer;

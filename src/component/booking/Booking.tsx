@@ -1,26 +1,21 @@
 import React from 'react';
 import './booking.css'
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css"
+import Calendar from "./calendar/Calendar";
+import BookingForm from "./bookingForm/BookingForm";
+
 
 const Booking = () => {
-
 
 
     return (
         <div className='booking-wrapper'>
 
             <div className='calendar'>
-                <DatePicker
-                    showTimeSelect
-                    dateFormat="Pp"
-                    inline
-                    onChange={()=>{}}
-                />
+                <Calendar/>
             </div>
 
             <div className='forms'>
-                forms
+                <BookingForm/>
             </div>
 
         </div>

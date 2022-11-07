@@ -1,12 +1,11 @@
 import React from 'react';
 import './orderBtns.css'
-import {useAppDispatch, useAppSelector} from "../../../hooks/redux";
+import {useAppDispatch} from "../../../hooks/redux";
 import {clearBasket} from "../../../store/basketSlice";
 import {setOrderStep} from "../../../store/viewSlice";
 
 const OrderButtons = () => {
     const dispatch = useAppDispatch();
-    const {basketItems} = useAppSelector(state => state.basket);
 
     
     return (

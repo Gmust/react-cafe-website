@@ -5,8 +5,7 @@ import {useAppDispatch, useAppSelector} from "../../../hooks/redux";
 import {formatPhoneNumber} from "../../../utils/mask/formatPhoneNumber";
 import {setIsBasketOpen, setOrderStep, setShowSuccessOrderPopUp} from "../../../store/viewSlice";
 import {useSendOrderMutation} from "../../../services/basketApi";
-import {clearBasket, setOrder} from "../../../store/basketSlice";
-import PopUp from "../../../assets/pop-up/PopUp";
+import {clearBasket} from "../../../store/basketSlice";
 
 type TTelephoneField = {
     telephone: string
@@ -30,6 +29,7 @@ const OrderStep = () => {
         if (isSuccess) {
             dispatch(setIsBasketOpen(!isBasketOpen))
             dispatch(setShowSuccessOrderPopUp(true))
+            dispatch(setOrderStep(false))
             dispatch(clearBasket())
             setTimeout(() => {
                 dispatch(setShowSuccessOrderPopUp(false))

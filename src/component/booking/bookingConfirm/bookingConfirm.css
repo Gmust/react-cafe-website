@@ -1,0 +1,87 @@
+
+.booking-popUp__wrapper {
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    z-index: 99;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.booking-content__wrapper {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 20px;
+    max-height: 600px;
+    width: 600px;
+    transform: scale(0.5);
+    transition: 0.4s all;
+    display: inline-flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.booking-content__wrapper.active {
+    transform: scale(1);
+    font-size: 20px;
+}
+
+h3{
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.booking-info{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.booking-info li{
+    margin-top: 10px;
+}
+
+.booking-popUp__wrapper.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.confirm-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 10%;
+}
+
+.confirm-buttons button{
+    margin: 10px;
+    height: 50px;
+    width: 100px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.yes-btn{
+    background-color: #64c407;
+}
+
+.confirm-buttons button:hover{
+    transform: scale(1.05);
+    transition: 200ms;
+}
+
+.change-btn{
+    background-color: indianred;
+}
