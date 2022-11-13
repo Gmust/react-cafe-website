@@ -1,0 +1,24 @@
+.booking-wrapper {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "calendar calendar calendar forms forms forms"
+    "calendar calendar calendar forms forms forms"
+    ". . . . . .";
+}
+
+.calendar {
+    margin-top: 30px;
+    grid-area: calendar;
+    display: flex;
+    justify-content: center;
+}
+
+.forms {
+    grid-area: forms;
+
+}

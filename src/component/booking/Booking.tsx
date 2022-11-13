@@ -1,8 +1,7 @@
 import React from 'react';
-import './booking.css'
 import Calendar from "./calendar/Calendar";
 import BookingForm from "./bookingForm/BookingForm";
-
+import './booking.css';
 
 const Booking = () => {
 
